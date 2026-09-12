@@ -34,61 +34,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.0973799964359023" />
-      <entry key="MS500" value="4.184671251426752" />
-      <entry key="S2" value="5.575150673937011" />
-      <entry key="S5" value="8.477607139725652" />
-      <entry key="S10" value="14.798967648175605" />
-      <entry key="S30" value="35.575588011055686" />
-      <entry key="S60" value="51.29870025470802" />
-      <entry key="M2" value="64.49933347569697" />
-      <entry key="M5" value="77.07920954072058" />
-      <entry key="M10" value="83.6667874388234" />
-      <entry key="M15" value="86.71293012416913" />
-      <entry key="M30" value="92.9282122200673" />
-      <entry key="H1" value="107.2097037283626" />
-      <entry key="H2" value="129.33695087896623" />
-      <entry key="H4" value="150.19351482342483" />
-      <entry key="D1" value="176.43730176923594" />
-      <entry key="W1" value="182.03130408191348" />
+      <entry key="MS100" value="9.483723527432299E-8" />
+      <entry key="MS500" value="0.043916140328137655" />
+      <entry key="S2" value="0.7823261252904538" />
+      <entry key="S5" value="2.123545033159836" />
+      <entry key="S10" value="3.4191596305240295" />
+      <entry key="S30" value="5.302366862104243" />
+      <entry key="S60" value="10.210696850887858" />
+      <entry key="M2" value="25.624564134345267" />
+      <entry key="M5" value="55.529608719448504" />
+      <entry key="M10" value="74.87058031917408" />
+      <entry key="M15" value="83.49296771539552" />
+      <entry key="M30" value="96.01317800829476" />
+      <entry key="H1" value="113.57520435638477" />
+      <entry key="H2" value="137.53050606257366" />
+      <entry key="H4" value="159.5626862632078" />
+      <entry key="D1" value="187.1179150992872" />
+      <entry key="W1" value="192.98422945172123" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="6.815864195824858E-217" />
-      <entry key="S5" value="3.4151388962664313E-87" />
-      <entry key="S10" value="5.843918972972178E-44" />
-      <entry key="S30" value="3.880622480674283E-15" />
-      <entry key="S60" value="6.229464247167865E-8" />
-      <entry key="M2" value="2.4958894701424347E-4" />
-      <entry key="M5" value="0.0362153260758521" />
-      <entry key="M10" value="0.1917724401067856" />
-      <entry key="M15" value="0.3631690241879981" />
-      <entry key="M30" value="1.4512147543123108" />
-      <entry key="H1" value="5.953935059819231" />
-      <entry key="H2" value="14.00434794636416" />
-      <entry key="H4" value="22.004086414735593" />
-      <entry key="D1" value="32.37035937528132" />
-      <entry key="W1" value="34.61104911401492" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0000000048769173" />
+      <entry key="M2" value="1.0000698349292416" />
+      <entry key="M5" value="1.0217586195857833" />
+      <entry key="M10" value="1.1486468340942402" />
+      <entry key="M15" value="1.3064468152168542" />
+      <entry key="M30" value="2.33307579141396" />
+      <entry key="H1" value="6.706445472176886" />
+      <entry key="H2" value="14.710196574510785" />
+      <entry key="H4" value="22.771769934724194" />
+      <entry key="D1" value="33.3131467818768" />
+      <entry key="W1" value="35.60230350537277" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.72878791758138" />
-      <entry key="MS500" value="3.9762525451280597" />
-      <entry key="S2" value="5.509998541359266" />
-      <entry key="S5" value="8.44594930261698" />
-      <entry key="S10" value="14.776871510546538" />
-      <entry key="S30" value="35.56101621609227" />
-      <entry key="S60" value="51.2885041408316" />
-      <entry key="M2" value="64.49317024296438" />
-      <entry key="M5" value="77.11181952602598" />
-      <entry key="M10" value="83.85548305079813" />
-      <entry key="M15" value="87.07318406229926" />
-      <entry key="M30" value="94.37572444952484" />
-      <entry key="H1" value="113.157818212641" />
-      <entry key="H2" value="143.33510148357058" />
-      <entry key="H4" value="172.19293054244318" />
-      <entry key="D1" value="208.80655111798532" />
-      <entry key="W1" value="216.64218450099165" />
+      <entry key="MS100" value="0.009957504909178431" />
+      <entry key="MS500" value="0.4066185378226811" />
+      <entry key="S2" value="1.3700183491068987" />
+      <entry key="S5" value="2.832881945142721" />
+      <entry key="S10" value="4.219660221431705" />
+      <entry key="S30" value="6.211641077719174" />
+      <entry key="S60" value="11.155218681348266" />
+      <entry key="M2" value="26.589864770363487" />
+      <entry key="M5" value="56.533505831874045" />
+      <entry key="M10" value="76.00840800911534" />
+      <entry key="M15" value="84.79118488572816" />
+      <entry key="M30" value="98.33988954943825" />
+      <entry key="H1" value="120.2745691457486" />
+      <entry key="H2" value="152.2338791964939" />
+      <entry key="H4" value="182.3294553538264" />
+      <entry key="D1" value="220.42989038749855" />
+      <entry key="W1" value="228.58635523893153" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -99,35 +99,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AutoEscolaS164Application.executor": "Run",
-    "Application.HashGenerator.executor": "Run",
-    "Maven.AutoEscolaS164 [clean,install].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.AutoEscolaS164Application.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Otavio/AutoEscolaS164/AutoEscolaS164",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AutoEscolaS164Application.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HashGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.AutoEscolaS164 [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AutoEscolaS164Application.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Otavio/AutoEscolaS164/AutoEscolaS164&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.senai.autoescolas164.domain.agenda" />
