@@ -1,0 +1,74 @@
+package br.com.senai.autoescolas164.adapter.in.controller;
+
+import br.com.senai.autoescolas164.adapter.in.controller.request.aluno.DadosAtualizacaoAluno;
+import br.com.senai.autoescolas164.adapter.in.controller.request.aluno.DadosCadastroAluno;
+import br.com.senai.autoescolas164.adapter.in.controller.request.instrutor.DadosAtualizacaoInstrutor;
+import br.com.senai.autoescolas164.adapter.in.controller.response.aluno.DadosDetalhamentoAluno;
+import br.com.senai.autoescolas164.adapter.in.controller.response.aluno.DadosListagemAluno;
+import br.com.senai.autoescolas164.adapter.in.controller.response.instrutor.DadosDetalhamentoInstrutor;
+import br.com.senai.autoescolas164.application.port.in.StdFeaturePort;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
+
+import java.awt.print.Pageable;
+import java.net.URI;
+
+@RestController
+@RequestMapping("/instrutores")
+@SecurityRequirement(name = "bearer-key")
+@RequiredArgsConstructor
+public class AlunoController implements StdFeaturePort<
+        DadosCadastroAluno,
+        DadosListagemAluno,
+        DadosAtualizacaoAluno,
+        Void,
+        DadosDetalhamentoAluno,
+        UriComponentsBuilder,
+        Long,
+        Pageable
+        > {
+    private final AlunoService service;
+
+    @Override
+    @PostMapping
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<DadosDetalhamentoAluno> cadastrar(
+            @RequestBody @Valid DadosCadastroAluno dados,
+            UriComponentsBuilder uriBuilder) {
+        DadosDetalhamentoAluno dto = service.cadastrarAluno(dados);
+        URI uri = uriBuilder
+                .path("/alunos/{id}")
+                .buildAndExpand(dto.id())
+                .toUri();
+        return ResponseEntity.created(uri).body(dto);
+    }
+
+    @Override
+    @GetMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN')")
+    public ResponseEntity<DadosDetalhamentoAluno> detalhar(
+            @PathVariable Long id) {
+        return ResponseEntity.ok(service.detalharAluno(id));
+    }
+
+    @Override
+    @PutMapping
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<DadosDetalhamentoAluno> atualizar(
+            @RequestBody @Valid DadosAtualizacaoAluno dados) {
+        return ResponseEntity.ok(service.atualizarAluno(dados));
+    }
+
+    @Override
+    @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<Void> excluir(@PathVariable Long id) {
+        service.excluirAluno(id);
+        return ResponseEntity.noContent().build();
+    }
+}
