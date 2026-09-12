@@ -24,5 +24,6 @@ public class AlunoEntity {
 
     @Embedded
     private Endereco endereco;
+
     private boolean ativo;
 }

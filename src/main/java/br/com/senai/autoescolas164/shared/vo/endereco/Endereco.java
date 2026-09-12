@@ -1,5 +1,6 @@
 package br.com.senai.autoescolas164.shared.vo.endereco;
 
+import br.com.senai.autoescolas164.shared.vo.endereco.dto.DadosEndereco;
 import jakarta.persistence.Embeddable;
 
 @Embeddable
@@ -90,4 +91,5 @@ public class Endereco {
             this.cep = cep;
         }
     }
+
 }

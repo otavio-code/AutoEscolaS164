@@ -2,11 +2,10 @@ package br.com.senai.autoescolas164.adapter.in.controller;
 
 import br.com.senai.autoescolas164.adapter.in.controller.request.aluno.DadosAtualizacaoAluno;
 import br.com.senai.autoescolas164.adapter.in.controller.request.aluno.DadosCadastroAluno;
-import br.com.senai.autoescolas164.adapter.in.controller.request.instrutor.DadosAtualizacaoInstrutor;
 import br.com.senai.autoescolas164.adapter.in.controller.response.aluno.DadosDetalhamentoAluno;
 import br.com.senai.autoescolas164.adapter.in.controller.response.aluno.DadosListagemAluno;
-import br.com.senai.autoescolas164.adapter.in.controller.response.instrutor.DadosDetalhamentoInstrutor;
 import br.com.senai.autoescolas164.application.port.in.StdFeaturePort;
+import br.com.senai.autoescolas164.application.service.AlunoService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
