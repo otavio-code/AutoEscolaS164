@@ -4,33 +4,156 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39cb23f5-3c16-4b29-ac6b-f18b92cb9c0c" name="Changes" comment="" />
+    <list default="true" id="ac886a7a-eebd-473b-a79e-45a612bf19d8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 4
-}]]></component>
-  <component name="ProjectId" id="3JEIQfxco2ksMKTEHr4r7FQfInF" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Record" />
+        <option value="Exception" />
+        <option value="OpenAPI" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="2.0973799964359023" />
+      <entry key="MS500" value="4.184671251426752" />
+      <entry key="S2" value="5.575150673937011" />
+      <entry key="S5" value="8.477607139725652" />
+      <entry key="S10" value="14.798967648175605" />
+      <entry key="S30" value="35.575588011055686" />
+      <entry key="S60" value="51.29870025470802" />
+      <entry key="M2" value="64.49933347569697" />
+      <entry key="M5" value="77.07920954072058" />
+      <entry key="M10" value="83.6667874388234" />
+      <entry key="M15" value="86.71293012416913" />
+      <entry key="M30" value="92.9282122200673" />
+      <entry key="H1" value="107.2097037283626" />
+      <entry key="H2" value="129.33695087896623" />
+      <entry key="H4" value="150.19351482342483" />
+      <entry key="D1" value="176.43730176923594" />
+      <entry key="W1" value="182.03130408191348" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="6.815864195824858E-217" />
+      <entry key="S5" value="3.4151388962664313E-87" />
+      <entry key="S10" value="5.843918972972178E-44" />
+      <entry key="S30" value="3.880622480674283E-15" />
+      <entry key="S60" value="6.229464247167865E-8" />
+      <entry key="M2" value="2.4958894701424347E-4" />
+      <entry key="M5" value="0.0362153260758521" />
+      <entry key="M10" value="0.1917724401067856" />
+      <entry key="M15" value="0.3631690241879981" />
+      <entry key="M30" value="1.4512147543123108" />
+      <entry key="H1" value="5.953935059819231" />
+      <entry key="H2" value="14.00434794636416" />
+      <entry key="H4" value="22.004086414735593" />
+      <entry key="D1" value="32.37035937528132" />
+      <entry key="W1" value="34.61104911401492" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.72878791758138" />
+      <entry key="MS500" value="3.9762525451280597" />
+      <entry key="S2" value="5.509998541359266" />
+      <entry key="S5" value="8.44594930261698" />
+      <entry key="S10" value="14.776871510546538" />
+      <entry key="S30" value="35.56101621609227" />
+      <entry key="S60" value="51.2885041408316" />
+      <entry key="M2" value="64.49317024296438" />
+      <entry key="M5" value="77.11181952602598" />
+      <entry key="M10" value="83.85548305079813" />
+      <entry key="M15" value="87.07318406229926" />
+      <entry key="M30" value="94.37572444952484" />
+      <entry key="H1" value="113.157818212641" />
+      <entry key="H2" value="143.33510148357058" />
+      <entry key="H4" value="172.19293054244318" />
+      <entry key="D1" value="208.80655111798532" />
+      <entry key="W1" value="216.64218450099165" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="3HJSL9Tr1bpTNrrf9CMVxCesPYa" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AutoEscolaS164Application.executor": "Run",
+    "Application.HashGenerator.executor": "Run",
+    "Maven.AutoEscolaS164 [clean,install].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.AutoEscolaS164Application.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Otavio/AutoEscolaS164/AutoEscolaS164",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.senai.autoescolas164.domain.agenda" />
+      <recent name="br.com.senai.autoescolas164.infra.security" />
+      <recent name="br.com.senai.autoescolas164.usuario" />
+      <recent name="br.com.senai.autoescolas164.instrutor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Instrutor\Desktop\AutoEscolaS164\src\main\java\br\com\senai\autoescolas164\adapter\in\controller\response" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="AutoEscolaS164Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="AutoEscolaS164" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.senai.autoescolas164.AutoEscolaS164Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -41,11 +164,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="39cb23f5-3c16-4b29-ac6b-f18b92cb9c0c" name="Changes" comment="" />
-      <created>1789219787554</created>
+      <changelist id="ac886a7a-eebd-473b-a79e-45a612bf19d8" name="Changes" comment="" />
+      <created>1785584619760</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1789219787554</updated>
+      <updated>1785584619760</updated>
     </task>
     <servers />
   </component>
