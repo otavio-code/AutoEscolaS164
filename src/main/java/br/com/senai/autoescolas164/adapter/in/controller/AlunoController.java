@@ -9,12 +9,15 @@ import br.com.senai.autoescolas164.application.service.AlunoService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springdoc.core.annotations.ParameterObject;
+import org.springframework.data.domain.Page;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
+import org.springframework.data.domain.Pageable;
 
-import java.awt.print.Pageable;
 import java.net.URI;
 
 @RestController
@@ -45,6 +48,15 @@ public class AlunoController implements StdFeaturePort<
                 .buildAndExpand(dto.id())
                 .toUri();
         return ResponseEntity.created(uri).body(dto);
+    }
+
+    @Override
+    @GetMapping
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
+    public ResponseEntity<Page<DadosListagemAluno>> listar(
+            @ParameterObject @PageableDefault(size = 10, sort = "nome")
+            org.springframework.data.domain.Pageable paginacao) {
+        return ResponseEntity.ok(service.listarAluno(paginacao));
     }
 
     @Override
