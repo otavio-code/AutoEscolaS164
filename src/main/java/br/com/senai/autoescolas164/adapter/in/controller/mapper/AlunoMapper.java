@@ -6,14 +6,12 @@ import br.com.senai.autoescolas164.adapter.in.controller.response.aluno.DadosLis
 import br.com.senai.autoescolas164.application.core.domain.Aluno;
 import br.com.senai.autoescolas164.shared.vo.endereco.mapper.EnderecoMapper;
 import lombok.RequiredArgsConstructor;
-import org.hibernate.validator.internal.constraintvalidators.bv.AssertTrueValidator;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
 public class AlunoMapper {
     private final EnderecoMapper enderecoMapper;
-    private final AssertTrueValidator assertTrueValidator;
 
     public Aluno toDomain(DadosCadastroAluno dados){
         return new Aluno(
