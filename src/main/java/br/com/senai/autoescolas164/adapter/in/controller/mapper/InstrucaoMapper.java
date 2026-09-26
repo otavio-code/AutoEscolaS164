@@ -12,13 +12,19 @@ import org.springframework.stereotype.Component;
 public class InstrucaoMapper {
     public Instrucao toDomain(DadosAgendamento dados){
         return new Instrucao(
-                //implementar
+                null,
+                dados.idAluno(),
+                dados.idInstrutor(),
+                dados.dataHora()
         );
     }
 
     public DadosDetalhamentoAgendamento toDetailDto(Instrucao instrucao){
         return new DadosDetalhamentoAluno(
-                //implementar
+                instrucao.getId(),
+                instrucao.getAluno(),
+                instrucao.getInstrutor(),
+                instrucao.getDataHora()
         );
     }
 

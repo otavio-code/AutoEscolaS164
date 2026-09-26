@@ -13,6 +13,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -43,6 +46,7 @@ public class InstrutorService {
                 .map(mapper::toListDto);
     }
 
+    @Cacheable(value = "instrutores", key = "#id")
     @Transactional(readOnly = true)
     public @Nullable DadosDetalhamentoInstrutor detalharInstrutor(Long id) {
         log.info("Consultando os dados do instrutor no banco de dados");
@@ -51,6 +55,7 @@ public class InstrutorService {
         return mapper.toDetailDto(instrutor);
     }
 
+    @CachePut(value = "instrutores", key = "#dados.id()")
     @Transactional
     public @Nullable DadosDetalhamentoInstrutor atualizarInstrutor(DadosAtualizacaoInstrutor dados) {
         Instrutor instrutor = repository.findById(dados.id())
@@ -66,6 +71,7 @@ public class InstrutorService {
         return mapper.toDetailDto(salvo);
     }
 
+    @CacheEvict(value = "instrutores", key = "#id")
     @Transactional
     public void excluirInstrutor(Long id) {
         Instrutor instrutor = repository.findById(id)
