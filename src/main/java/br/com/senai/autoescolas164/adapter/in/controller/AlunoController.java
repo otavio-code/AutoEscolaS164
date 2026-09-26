@@ -21,7 +21,7 @@ import org.springframework.data.domain.Pageable;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/instrutores")
+@RequestMapping("/alunos")
 @SecurityRequirement(name = "bearer-key")
 @RequiredArgsConstructor
 public class AlunoController implements StdFeaturePort<

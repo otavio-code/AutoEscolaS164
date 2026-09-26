@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac886a7a-eebd-473b-a79e-45a612bf19d8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/application/service/InstrutorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/application/service/InstrutorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/in/controller/AlunoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/in/controller/AlunoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/in/controller/mapper/InstrucaoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/out/repository/InstrucaoRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/out/repository/InstrucaoRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/out/repository/persistence/InstrucaoJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/out/repository/persistence/InstrucaoJpaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/application/port/out/InstrucaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/application/port/out/InstrucaoRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,60 +42,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000050335254216" />
-      <entry key="S2" value="1.0485873534099017" />
-      <entry key="S5" value="1.3733609472133157" />
-      <entry key="S10" value="1.9640395989386277" />
-      <entry key="S30" value="3.6906752166656647" />
-      <entry key="S60" value="5.364387863218945" />
-      <entry key="M2" value="9.671101041165707" />
-      <entry key="M5" value="27.969399166442805" />
-      <entry key="M10" value="54.03616415692743" />
-      <entry key="M15" value="73.21863752658008" />
-      <entry key="M30" value="108.54797137001682" />
-      <entry key="H1" value="156.63034260417376" />
-      <entry key="H2" value="244.83862377295173" />
-      <entry key="H4" value="389.9832255596829" />
-      <entry key="D1" value="767.2697905551644" />
-      <entry key="W1" value="893.9005413283419" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000009087073" />
+      <entry key="S10" value="1.0000422296365699" />
+      <entry key="S30" value="1.0551606744096975" />
+      <entry key="S60" value="1.3320573675591758" />
+      <entry key="M2" value="1.814877599031111" />
+      <entry key="M5" value="2.3967042985255653" />
+      <entry key="M10" value="2.775459270583109" />
+      <entry key="M15" value="3.8689058220561656" />
+      <entry key="M30" value="17.121893173638707" />
+      <entry key="H1" value="64.7591437831332" />
+      <entry key="H2" value="164.81183590064583" />
+      <entry key="H4" value="330.49519066039903" />
+      <entry key="D1" value="790.4059270892586" />
+      <entry key="W1" value="954.3267155875096" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="2.248485061359168E-98" />
-      <entry key="MS500" value="2.9537790188308876E-20" />
-      <entry key="S2" value="1.310975639253091E-5" />
-      <entry key="S5" value="0.011170552401699833" />
-      <entry key="S10" value="0.11072586656448684" />
-      <entry key="S30" value="0.6466686047023115" />
-      <entry key="S60" value="1.1460720315771407" />
-      <entry key="M2" value="1.9886674946162026" />
-      <entry key="M5" value="5.684068425216059" />
-      <entry key="M10" value="10.169031560235924" />
-      <entry key="M15" value="12.668205695755463" />
-      <entry key="M30" value="17.150777422272164" />
-      <entry key="H1" value="27.89703445580425" />
-      <entry key="H2" value="58.34736910443218" />
-      <entry key="H4" value="119.76360694517533" />
-      <entry key="D1" value="294.0706113834829" />
-      <entry key="W1" value="353.64602872480225" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="5.549701578805903E-290" />
+      <entry key="S10" value="3.4432883968178996E-145" />
+      <entry key="S30" value="1.7056270128883185E-48" />
+      <entry key="S60" value="3.3020883791506373E-24" />
+      <entry key="M2" value="4.989479344346784E-12" />
+      <entry key="M5" value="1.1276905266519877E-4" />
+      <entry key="M10" value="0.042955096235755316" />
+      <entry key="M15" value="0.3677279194504722" />
+      <entry key="M30" value="3.737529099848214" />
+      <entry key="H1" value="14.888893853871037" />
+      <entry key="H2" value="42.97765949201624" />
+      <entry key="H4" value="102.95473670349267" />
+      <entry key="D1" value="299.98160529571106" />
+      <entry key="W1" value="373.67051177326067" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="7.436922345562613E-18" />
-      <entry key="MS500" value="3.755269570331181E-4" />
-      <entry key="S2" value="0.16348716651996129" />
-      <entry key="S5" value="0.746599376696155" />
-      <entry key="S10" value="1.605886799179275" />
-      <entry key="S30" value="4.017918291006186" />
-      <entry key="S60" value="6.271931881737898" />
-      <entry key="M2" value="11.487908198507776" />
-      <entry key="M5" value="33.530671584414236" />
-      <entry key="M10" value="64.11471798036078" />
-      <entry key="M15" value="85.81548849655915" />
-      <entry key="M30" value="125.65223974465943" />
-      <entry key="H1" value="184.4884179546634" />
-      <entry key="H2" value="303.1465554377436" />
-      <entry key="H4" value="509.7109314256252" />
-      <entry key="D1" value="1061.3279835208275" />
-      <entry key="W1" value="1247.5445016579617" />
+      <entry key="MS100" value="8.337648051479459E-5" />
+      <entry key="MS500" value="0.15283003471150855" />
+      <entry key="S2" value="0.6252478081243442" />
+      <entry key="S5" value="0.8287449053955548" />
+      <entry key="S10" value="0.9103964766082986" />
+      <entry key="S30" value="1.024326503409482" />
+      <entry key="S60" value="1.3164893668268132" />
+      <entry key="M2" value="1.8070367290477" />
+      <entry key="M5" value="2.393659847375005" />
+      <entry key="M10" value="2.816672819934932" />
+      <entry key="M15" value="4.234582617176894" />
+      <entry key="M30" value="20.853018167889484" />
+      <entry key="H1" value="79.63363624464662" />
+      <entry key="H2" value="207.76579830962766" />
+      <entry key="H4" value="433.4219526189407" />
+      <entry key="D1" value="1090.3753045820054" />
+      <entry key="W1" value="1327.9951031628636" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -151,7 +156,20 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.AutoEscolaS164Application">
+    <configuration name="HashGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.senai.autoescolas164.shared.util.HashGenerator" />
+      <module name="AutoEscolaS164" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.senai.autoescolas164.shared.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AutoEscolaS164Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="AutoEscolaS164" />
@@ -160,6 +178,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HashGenerator" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

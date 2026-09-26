@@ -8,13 +8,39 @@ import br.com.senai.autoescolas164.application.port.out.InstrucaoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
 public class InstrucaoRepositoryImpl implements InstrucaoRepository {
+
     private final InstrucaoJpaRepository jpaRepository;
     private final InstrucaoEntityMapper entityMapper;
+
+    @Override
+    public boolean existsByInstrutorIdAndDataHora(
+            Long idInstrutor,
+            LocalDateTime dataHora) {
+
+        return jpaRepository.existsByInstrutorIdAndDataHora(
+                idInstrutor,
+                dataHora
+        );
+    }
+
+    @Override
+    public boolean existsByAlunoIdAndDataHoraBetween(
+            Long alunoId,
+            LocalDateTime inicio,
+            LocalDateTime fim) {
+
+        return jpaRepository.existsByAlunoIdAndDataHoraBetween(
+                alunoId,
+                inicio,
+                fim
+        );
+    }
 
     @Override
     public Instrucao save(Instrucao instrucao) {
@@ -24,17 +50,18 @@ public class InstrucaoRepositoryImpl implements InstrucaoRepository {
     }
 
     @Override
-    public Optional<Instrucao> findById(Long id){
-        return jpaRepository.findById(id).map(entityMapper::toDomain);
+    public Optional<Instrucao> findById(Long id) {
+        return jpaRepository.findById(id)
+                .map(entityMapper::toDomain);
     }
 
     @Override
-    public boolean existsById(Long id){
+    public boolean existsById(Long id) {
         return jpaRepository.existsById(id);
     }
 
     @Override
-    public Instrucao getReferenceById(Long id){
+    public Instrucao getReferenceById(Long id) {
         InstrucaoEntity entity = jpaRepository.getReferenceById(id);
         return entityMapper.toDomain(entity);
     }

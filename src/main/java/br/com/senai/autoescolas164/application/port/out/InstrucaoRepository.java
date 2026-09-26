@@ -1,15 +1,23 @@
 package br.com.senai.autoescolas164.application.port.out;
 
 import br.com.senai.autoescolas164.application.core.domain.Instrucao;
-import org.springframework.data.jpa.repository.JpaRepository;
+
 
 import java.time.LocalDateTime;
 import java.util.Optional;
 
-public interface InstrucaoRepository extends JpaRepository<Instrucao, Long> {
-    boolean existsByInstrutorIdAndDataHora(Long idInstrutor, LocalDateTime dataHora);
+public interface InstrucaoRepository {
 
-    boolean existsByAlunoIdAndDataHoraBetween(Long idAluno, LocalDateTime inicio, LocalDateTime fim);
+    boolean existsByInstrutorIdAndDataHora(
+            Long idInstrutor,
+            LocalDateTime dataHora
+    );
+
+    boolean existsByAlunoIdAndDataHoraBetween(
+            Long idAluno,
+            LocalDateTime inicio,
+            LocalDateTime fim
+    );
 
     Instrucao save(Instrucao instrucao);
 
@@ -18,5 +26,4 @@ public interface InstrucaoRepository extends JpaRepository<Instrucao, Long> {
     boolean existsById(Long id);
 
     Instrucao getReferenceById(Long id);
-
 }
