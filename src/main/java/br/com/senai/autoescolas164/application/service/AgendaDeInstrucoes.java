@@ -13,11 +13,13 @@ import br.com.senai.autoescolas164.exception.type.AlunoNotFoundException;
 import br.com.senai.autoescolas164.exception.type.InstrutorNotFoundException;
 import br.com.senai.autoescolas164.exception.type.ValidacaoException;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class AgendaDeInstrucoes {
     private final InstrucaoRepository repository;
@@ -26,13 +28,27 @@ public class AgendaDeInstrucoes {
     private final List<ValidadorAgendamento> validadoresAgendamento;
 
     public DadosDetalhamentoAgendamento agendar(DadosAgendamento dados) {
+        log.info("Agendamento iniciado para Aluno: {}, Instrutor: {}, Data: {}",
+                dados.idAluno(),
+                dados.idInstrutor(),
+                dados.dataHora()
+        );
         if (!alunoRepository.existsById(dados.idAluno())) {
+            log.warn(
+                    "Tentativa de agendamento para aluno inexistente. Aluno: {}",
+                    dados.idAluno()
+            );
             throw new AlunoNotFoundException("ID do aluno informado não existe!");
         }
         if (dados.idInstrutor() != null && !instrutorRepository.existsById(dados.idInstrutor())) {
+            log.warn(
+                    "Tentativa de agendamento com instrutor inexistente. Aluno: {}",
+                    dados.idInstrutor()
+            );
             throw new InstrutorNotFoundException("ID do instrutor informado não existe!");
         }
         //Validações
+        log.debug("Executando os validadores do agendamento...");
         validadoresAgendamento.forEach(validador -> validador.validar(dados));
 
         Aluno aluno = alunoRepository.getReferenceById(dados.idAluno());
@@ -47,6 +63,7 @@ public class AgendaDeInstrucoes {
                 dados.dataHora()
         );
         Instrucao salva = repository.save(instrucao);
+        log.info("Instrução agendada com sucesso!");
         return new DadosDetalhamentoAgendamento(salva);
     }
 

@@ -9,18 +9,25 @@ import br.com.senai.autoescolas164.application.core.domain.Instrutor;
 import br.com.senai.autoescolas164.application.port.out.InstrutorRepository;
 import br.com.senai.autoescolas164.shared.vo.endereco.mapper.EnderecoMapper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.jspecify.annotations.Nullable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+
 @Service
+//@Slf4j //Anotação do lombok para logs quando não usa arquitetura hexagonal
 @RequiredArgsConstructor
 public class InstrutorService {
     private final InstrutorRepository repository;
     private final InstrutorMapper mapper;
     private final EnderecoMapper enderecoMapper;
+
+    private static final Logger log = LoggerFactory.getLogger(InstrutorService.class);
 
     @Transactional
     public DadosDetalhamentoInstrutor cadastrarInstrutor(DadosCadastroInstrutor dados) {
@@ -38,6 +45,7 @@ public class InstrutorService {
 
     @Transactional(readOnly = true)
     public @Nullable DadosDetalhamentoInstrutor detalharInstrutor(Long id) {
+        log.info("Consultando os dados do instrutor no banco de dados");
         Instrutor instrutor = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("ID do instrutor informado não existe!"));
         return mapper.toDetailDto(instrutor);

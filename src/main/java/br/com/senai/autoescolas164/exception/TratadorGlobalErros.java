@@ -3,6 +3,7 @@ package br.com.senai.autoescolas164.exception;
 import br.com.senai.autoescolas164.exception.type.AlunoNotFoundException;
 import br.com.senai.autoescolas164.exception.type.ValidacaoException;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authorization.AuthorizationDeniedException;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.List;
 
+@Slf4j
 @RestControllerAdvice
 public class TratadorGlobalErros {
     @ExceptionHandler(EntityNotFoundException.class)
@@ -23,6 +25,14 @@ public class TratadorGlobalErros {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<List<DadosBadRequest>> tratarBadRequest(
             MethodArgumentNotValidException e) {
+        log.warn(
+                "Erro de validação. Campos inválidos: {}",
+                e
+                        .getFieldErrors()
+                        .stream()
+                        .map(FieldError::getField)
+                        .toList()
+        );
         List<FieldError> erros = e.getFieldErrors();
         return ResponseEntity
                 .badRequest()
@@ -56,6 +66,7 @@ public class TratadorGlobalErros {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<DadosException> tratarErroGenerico(Exception e) {
+        log.error("Erro inesperado: ", e);
         return ResponseEntity
                 .internalServerError()
                 .body(new DadosException(e.getMessage()));
