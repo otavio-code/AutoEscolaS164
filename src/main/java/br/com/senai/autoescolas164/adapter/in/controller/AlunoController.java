@@ -1,5 +1,6 @@
 package br.com.senai.autoescolas164.adapter.in.controller;
 
+import br.com.senai.autoescolas164.adapter.in.controller.assembler.InstrutorAssembler;
 import br.com.senai.autoescolas164.adapter.in.controller.request.aluno.DadosAtualizacaoAluno;
 import br.com.senai.autoescolas164.adapter.in.controller.request.aluno.DadosCadastroAluno;
 import br.com.senai.autoescolas164.adapter.in.controller.response.aluno.DadosDetalhamentoAluno;
@@ -12,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Page;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -35,11 +37,12 @@ public class AlunoController implements StdFeaturePort<
         Pageable
         > {
     private final AlunoService service;
+    private final InstrutorAssembler assembler;
 
     @Override
     @PostMapping
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<DadosDetalhamentoAluno> cadastrar(
+    public ResponseEntity<EntityModel<DadosDetalhamentoAluno>> cadastrar(
             @RequestBody @Valid DadosCadastroAluno dados,
             UriComponentsBuilder uriBuilder) {
         DadosDetalhamentoAluno dto = service.cadastrarAluno(dados);
@@ -47,7 +50,7 @@ public class AlunoController implements StdFeaturePort<
                 .path("/alunos/{id}")
                 .buildAndExpand(dto.id())
                 .toUri();
-        return ResponseEntity.created(uri).body(dto);
+        return ResponseEntity.created(uri).body(assembler.toCreate(dto));
     }
 
     @Override

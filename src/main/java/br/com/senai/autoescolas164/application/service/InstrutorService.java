@@ -79,4 +79,13 @@ public class InstrutorService {
         instrutor.excluir();
         repository.save(instrutor);
     }
+
+    @Transactional
+    public DadosDetalhamentoInstrutor reativarInstrutor(Long id) {
+        Instrutor instrutor = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("ID do instrutor informado não existe!"));
+        instrutor.reativar();
+        Instrutor salvo = repository.save(instrutor);
+        return mapper.toDetailDto(salvo);
+    }
 }

@@ -101,4 +101,8 @@ public class Instrutor {
     public void excluir() {
         this.ativo = false;
     }
+
+    public void reativar() {
+        this.ativo = true;
+    }
 }

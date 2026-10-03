@@ -1,5 +1,6 @@
 package br.com.senai.autoescolas164.adapter.in.controller;
 
+import br.com.senai.autoescolas164.adapter.in.controller.assembler.InstrutorAssembler;
 import br.com.senai.autoescolas164.adapter.in.controller.request.instrutor.DadosAtualizacaoInstrutor;
 import br.com.senai.autoescolas164.adapter.in.controller.request.instrutor.DadosCadastroInstrutor;
 import br.com.senai.autoescolas164.adapter.in.controller.response.instrutor.DadosDetalhamentoInstrutor;
@@ -13,6 +14,8 @@ import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.PagedModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -35,11 +38,12 @@ public class InstrutorController implements StdFeaturePort<
         Pageable
         > {
     private final InstrutorService service;
+    private final InstrutorAssembler assembler;
 
     @Override
     @PostMapping
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<DadosDetalhamentoInstrutor> cadastrar(
+    public ResponseEntity<EntityModel<DadosDetalhamentoInstrutor>> cadastrar(
             @RequestBody @Valid DadosCadastroInstrutor dados,
             UriComponentsBuilder uriBuilder) {
         DadosDetalhamentoInstrutor dto = service.cadastrarInstrutor(dados);
@@ -47,24 +51,27 @@ public class InstrutorController implements StdFeaturePort<
                 .path("/instrutores/{id}")
                 .buildAndExpand(dto.id())
                 .toUri();
-        return ResponseEntity.created(uri).body(dto);
+        return ResponseEntity.created(uri).body(assembler.toCreate(dto));
     }
 
     @Override
     @GetMapping
     @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
-    public ResponseEntity<Page<DadosListagemInstrutor>> listar(
+    public ResponseEntity<PagedModel<Page<DadosListagemInstrutor>>> listar(
             @ParameterObject @PageableDefault(size = 10, sort = "nome")
             Pageable paginacao) {
-        return ResponseEntity.ok(service.listarInstrutores(paginacao));
+        Page page = service.listarInstrutores(paginacao);
+        return ResponseEntity.ok(assembler.toList(page));
+
     }
 
     @Override
     @GetMapping("/{id}")
     @PreAuthorize("hasAnyRole('ADMIN')")
-    public ResponseEntity<DadosDetalhamentoInstrutor> detalhar(
+    public ResponseEntity<EntityModel<DadosDetalhamentoInstrutor>> detalhar(
             @PathVariable Long id) {
-        return ResponseEntity.ok(service.detalharInstrutor(id));
+        DadosDetalhamentoInstrutor dto = service.detalharInstrutor(id);
+        return ResponseEntity.ok(assembler.toDetail(dto));
     }
 
     @Override
@@ -81,5 +88,13 @@ public class InstrutorController implements StdFeaturePort<
     public ResponseEntity<Void> excluir(@PathVariable Long id) {
         service.excluirInstrutor(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @Override //Colocar na porta???
+    @PatchMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<DadosDetalhamentoInstrutor> reativar(@PathVariable Long id) {
+        DadosDetalhamentoInstrutor dto = service.reativarInstrutor(id);
+        return ResponseEntity.ok(dto);
     }
 }
