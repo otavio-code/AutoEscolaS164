@@ -1,6 +1,6 @@
 package br.com.senai.autoescolas164.adapter.in.controller;
 
-import br.com.senai.autoescolas164.adapter.in.controller.assembler.InstrutorAssembler;
+import br.com.senai.autoescolas164.adapter.in.controller.assembler.AlunoAssembler;
 import br.com.senai.autoescolas164.adapter.in.controller.request.aluno.DadosAtualizacaoAluno;
 import br.com.senai.autoescolas164.adapter.in.controller.request.aluno.DadosCadastroAluno;
 import br.com.senai.autoescolas164.adapter.in.controller.response.aluno.DadosDetalhamentoAluno;
@@ -14,6 +14,7 @@ import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Page;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.PagedModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -37,7 +38,7 @@ public class AlunoController implements StdFeaturePort<
         Pageable
         > {
     private final AlunoService service;
-    private final InstrutorAssembler assembler;
+    private final AlunoAssembler assembler;
 
     @Override
     @PostMapping
@@ -56,18 +57,20 @@ public class AlunoController implements StdFeaturePort<
     @Override
     @GetMapping
     @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
-    public ResponseEntity<Page<DadosListagemAluno>> listar(
+    public ResponseEntity<PagedModel<Page<DadosListagemAluno>>> listar(
             @ParameterObject @PageableDefault(size = 10, sort = "nome")
-            org.springframework.data.domain.Pageable paginacao) {
-        return ResponseEntity.ok(service.listarAluno(paginacao));
+            Pageable paginacao) {
+        Page page = service.listarAluno(paginacao);
+        return ResponseEntity.ok(assembler.toList(page));
     }
 
     @Override
     @GetMapping("/{id}")
     @PreAuthorize("hasAnyRole('ADMIN')")
-    public ResponseEntity<DadosDetalhamentoAluno> detalhar(
+    public ResponseEntity<EntityModel<DadosDetalhamentoAluno>> detalhar(
             @PathVariable Long id) {
-        return ResponseEntity.ok(service.detalharAluno(id));
+        DadosDetalhamentoAluno dto = service.detalharAluno(id);
+        return ResponseEntity.ok(assembler.toDetail(dto));
     }
 
     @Override
@@ -84,5 +87,13 @@ public class AlunoController implements StdFeaturePort<
     public ResponseEntity<Void> excluir(@PathVariable Long id) {
         service.excluirAluno(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @Override
+    @PatchMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<DadosDetalhamentoAluno> reativar(@PathVariable Long id) {
+        DadosDetalhamentoAluno dto = service.reativarAluno(id);
+        return ResponseEntity.ok(dto);
     }
 }

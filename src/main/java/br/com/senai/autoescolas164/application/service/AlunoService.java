@@ -65,4 +65,12 @@ public class AlunoService {
         repository.save(aluno);
     }
 
+    @Transactional
+    public DadosDetalhamentoAluno reativarAluno(Long id) {
+        Aluno aluno = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("ID do aluno informado não existe!"));
+        aluno.reativar();
+        Aluno salvo = repository.save(aluno);
+        return mapper.toDetailDto(salvo);
+    }
 }
