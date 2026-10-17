@@ -2,6 +2,7 @@ package br.com.senai.autoescolas164.application.service;
 
 import br.com.senai.autoescolas164.adapter.in.controller.request.instrucao.DadosAgendamento;
 import br.com.senai.autoescolas164.adapter.in.controller.response.instrucao.DadosDetalhamentoAgendamento;
+import br.com.senai.autoescolas164.adapter.out.gateway.notification.NotificationClient;
 import br.com.senai.autoescolas164.application.core.domain.Aluno;
 import br.com.senai.autoescolas164.application.core.domain.Instrucao;
 import br.com.senai.autoescolas164.application.core.domain.Instrutor;
@@ -26,6 +27,7 @@ public class AgendaDeInstrucoes {
     private final AlunoRepository alunoRepository;
     private final InstrutorRepository instrutorRepository;
     private final List<ValidadorAgendamento> validadoresAgendamento;
+    private final NotificationClient notificationClient;
 
     public DadosDetalhamentoAgendamento agendar(DadosAgendamento dados) {
         log.info("Agendamento iniciado para Aluno: {}, Instrutor: {}, Data: {}",
@@ -64,6 +66,9 @@ public class AgendaDeInstrucoes {
         );
         Instrucao salva = repository.save(instrucao);
         log.info("Instrução agendada com sucesso!");
+
+        notificationClient.notificarAgendamento(salva);
+
         return new DadosDetalhamentoAgendamento(salva);
     }
 

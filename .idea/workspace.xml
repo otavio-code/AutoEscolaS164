@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="AutoEscolaS164:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac886a7a-eebd-473b-a79e-45a612bf19d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/out/gateway/notification/NotificationClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/out/gateway/notification/dto/NotificationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/out/gateway/notification/enumeration/EventType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/out/gateway/notification/enumeration/NotificationChannel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/config/notification/NotificationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/in/controller/AlunoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/in/controller/AlunoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/in/controller/assembler/AlunoAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/in/controller/assembler/AlunoAssembler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/application/core/domain/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/application/core/domain/Aluno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/application/service/AlunoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/application/service/AlunoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/in/controller/InstrutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/adapter/in/controller/InstrutorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/application/service/AgendaDeInstrucoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/application/service/AgendaDeInstrucoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/senai/autoescolas164/config/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +33,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Exception" />
         <option value="OpenAPI" />
         <option value="Interface" />
-        <option value="Record" />
         <option value="Class" />
+        <option value="Record" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -40,61 +54,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000484884721" />
-      <entry key="MS500" value="1.0612338324896078" />
-      <entry key="S2" value="2.021668612660225" />
-      <entry key="S5" value="2.9986780627379153" />
-      <entry key="S10" value="4.0074339263048575" />
-      <entry key="S30" value="7.094813152804823" />
-      <entry key="S60" value="9.265520866450576" />
-      <entry key="M2" value="10.899495013107128" />
-      <entry key="M5" value="13.675667409370066" />
-      <entry key="M10" value="19.65000608280432" />
-      <entry key="M15" value="25.17411875136087" />
-      <entry key="M30" value="39.87217552768805" />
-      <entry key="H1" value="73.67453001288372" />
-      <entry key="H2" value="157.1339918346017" />
-      <entry key="H4" value="328.72214383720063" />
-      <entry key="D1" value="967.3001811264102" />
-      <entry key="W1" value="1242.3574434041536" />
+      <entry key="MS100" value="1.0000000076600448" />
+      <entry key="MS500" value="1.0238147629740588" />
+      <entry key="S2" value="1.3928362589292516" />
+      <entry key="S5" value="1.6887489956404855" />
+      <entry key="S10" value="1.8895024481310738" />
+      <entry key="S30" value="3.430434798583916" />
+      <entry key="S60" value="6.313581439007659" />
+      <entry key="M2" value="12.219581748946158" />
+      <entry key="M5" value="31.507287129957913" />
+      <entry key="M10" value="57.26761851731605" />
+      <entry key="M15" value="74.85074866510301" />
+      <entry key="M30" value="103.89934979585641" />
+      <entry key="H1" value="134.17291926557147" />
+      <entry key="H2" value="194.8281911495083" />
+      <entry key="H4" value="343.1461838247536" />
+      <entry key="D1" value="1085.248295515751" />
+      <entry key="W1" value="1465.6590834371293" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="3.3234439469293747E-74" />
-      <entry key="MS500" value="2.0188346536648266E-15" />
-      <entry key="S2" value="2.5685570247851314E-4" />
-      <entry key="S5" value="0.05638771325511599" />
-      <entry key="S10" value="0.3850626989456859" />
-      <entry key="S30" value="1.4863937430110652" />
-      <entry key="S60" value="2.1065853960502907" />
-      <entry key="M2" value="2.523669938402135" />
-      <entry key="M5" value="3.503808450386234" />
-      <entry key="M10" value="6.045918082171958" />
-      <entry key="M15" value="8.19836563545271" />
-      <entry key="M30" value="12.698319450047205" />
-      <entry key="H1" value="23.79372357515501" />
-      <entry key="H2" value="51.96141867242814" />
-      <entry key="H4" value="110.7565839876318" />
-      <entry key="D1" value="361.1213816656159" />
-      <entry key="W1" value="476.3950703848632" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="5.643206711597625E-118" />
+      <entry key="S5" value="1.2606960251144775E-47" />
+      <entry key="S10" value="3.550628148813212E-24" />
+      <entry key="S30" value="1.525580271704103E-8" />
+      <entry key="S60" value="1.2351438265641157E-4" />
+      <entry key="M2" value="0.01111385771412257" />
+      <entry key="M5" value="0.16721664243016884" />
+      <entry key="M10" value="0.45008434374463546" />
+      <entry key="M15" value="0.6741048534711129" />
+      <entry key="M30" value="1.4417129960933832" />
+      <entry key="H1" value="7.4714033929628725" />
+      <entry key="H2" value="32.47209062093345" />
+      <entry key="H4" value="92.53645995185259" />
+      <entry key="D1" value="390.91195348768497" />
+      <entry key="W1" value="549.2385217008593" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.14458604686657303" />
-      <entry key="MS500" value="0.7153429730310219" />
-      <entry key="S2" value="1.7629550919437829" />
-      <entry key="S5" value="2.8554723369482415" />
-      <entry key="S10" value="4.174699457495499" />
-      <entry key="S30" value="8.318346984970711" />
-      <entry key="S60" value="11.16169504771584" />
-      <entry key="M2" value="13.28663124179321" />
-      <entry key="M5" value="17.10869814276759" />
-      <entry key="M10" value="25.646925696024592" />
-      <entry key="M15" value="33.332402282891785" />
-      <entry key="M30" value="52.54279230829994" />
-      <entry key="H1" value="97.44494791827479" />
-      <entry key="H2" value="209.0706527535764" />
-      <entry key="H4" value="439.4515581018068" />
-      <entry key="D1" value="1328.4071163667234" />
-      <entry key="W1" value="1718.7498322102504" />
+      <entry key="MS100" value="0.9526380000681388" />
+      <entry key="MS500" value="1.0085923624738546" />
+      <entry key="S2" value="1.3651237599426267" />
+      <entry key="S5" value="1.6696984815792815" />
+      <entry key="S10" value="1.8777630803214183" />
+      <entry key="S30" value="3.4235922245186083" />
+      <entry key="S60" value="6.307193533611258" />
+      <entry key="M2" value="12.220971961826148" />
+      <entry key="M5" value="31.654220014110255" />
+      <entry key="M10" value="57.694162625209316" />
+      <entry key="M15" value="75.50250967115034" />
+      <entry key="M30" value="105.32353851445099" />
+      <entry key="H1" value="141.62877818359547" />
+      <entry key="H2" value="227.28166432594426" />
+      <entry key="H4" value="435.65968499025087" />
+      <entry key="D1" value="1476.144840307614" />
+      <entry key="W1" value="2014.8945502829724" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -105,40 +119,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.AutoEscolaS164Application.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HashGenerator.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.AutoEscolaS164 [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AutoEscolaS164Application.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Otavio/AutoEscolaS164/AutoEscolaS164&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AutoEscolaS164Application.executor": "Run",
+    "Application.HashGenerator.executor": "Run",
+    "Maven.AutoEscolaS164 [clean,install].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.AutoEscolaS164Application.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/repos/AutoEscolaS164/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.senai.autoescolas164.domain.agenda" />
@@ -147,6 +161,7 @@
       <recent name="br.com.senai.autoescolas164.instrutor" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\repos\AutoEscolaS164\src\main\resources" />
       <recent name="C:\Users\Instrutor\Desktop\AutoEscolaS164\src\main\java\br\com\senai\autoescolas164\adapter\in\controller\response" />
     </key>
   </component>
@@ -170,6 +185,11 @@
       </method>
     </configuration>
     <configuration name="AutoEscolaS164Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="${MYSQL_DEV_USER}" value="root" />
+        <env name="MYSQL_DEV_PASS" value="senai" />
+        <env name="JWT_DEV_SECRET" value="123456" />
+      </envs>
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="AutoEscolaS164" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.senai.autoescolas164.AutoEscolaS164Application" />
@@ -177,6 +197,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.HashGenerator" />
+      <item itemvalue="Spring Boot.AutoEscolaS164Application" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.HashGenerator" />
@@ -186,8 +210,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
       </set>
     </attachedChunks>
   </component>
@@ -203,5 +227,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

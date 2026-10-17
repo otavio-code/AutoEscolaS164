@@ -42,7 +42,7 @@ public class InstrutorController implements StdFeaturePort<
 
     @Override
     @PostMapping
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public ResponseEntity<EntityModel<DadosDetalhamentoInstrutor>> cadastrar(
             @RequestBody @Valid DadosCadastroInstrutor dados,
             UriComponentsBuilder uriBuilder) {

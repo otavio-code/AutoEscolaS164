@@ -1,7 +1,9 @@
 package br.com.senai.autoescolas164.config.security;
 
 import br.com.senai.autoescolas164.config.security.filter.SecurityFilter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -22,9 +24,12 @@ import java.util.List;
 @Configuration
 @EnableWebSecurity //Para gerenciamento alternativo de autorizações
 @EnableMethodSecurity //Para gerenciamento alternativo de autorizações
+@RequiredArgsConstructor
 public class SecurityConfig {
-    @Autowired
     private SecurityFilter securityFilter;
+
+    @Value("${app.cors.allowed-origins}")
+    private String AllowedOrigins;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) {
@@ -36,11 +41,7 @@ public class SecurityConfig {
                         .configurationSource(request -> {
                             CorsConfiguration configuration = new CorsConfiguration();
                             configuration.setAllowedOriginPatterns(Arrays
-                                    .asList(
-                                            "http://localhost:3000",
-                                            "http://127.0.0.1:3000",
-                                            "http://localhost:5500",
-                                            "http://127.0.0.1:5500")
+                                    .asList(AllowedOrigins.split(","))
                             );
                             configuration.setAllowedMethods(List.of(
                                     "GET",
